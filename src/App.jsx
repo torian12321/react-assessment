@@ -10,7 +10,6 @@ const App = () => (
     <Switch>
       <Route
         path="/"
-        exact
         component={TaskOne}
       />
       <Route
