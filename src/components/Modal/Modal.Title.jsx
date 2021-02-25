@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
 const Title = styled.div`
@@ -13,3 +14,10 @@ export const ModalTitle = ({ title }) => (title ? (
     {title}
   </Title>
 ) : null);
+
+ModalTitle.propTypes = {
+  title: PropTypes.string,
+};
+ModalTitle.defaultProps = {
+  title: '',
+};

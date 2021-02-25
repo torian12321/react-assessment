@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import Wrapper from './Button.styled';
 
 export const Button = ({
@@ -7,7 +8,7 @@ export const Button = ({
   onClick,
   disabled,
   outline,
-  type = 'button',
+  type,
 }) => {
   const content = children || label;
   const handleClick = () => {
@@ -21,4 +22,20 @@ export const Button = ({
       {content}
     </Wrapper>
   ) : null;
+};
+
+Button.propTypes = {
+  children: PropTypes.node,
+  label: PropTypes.string,
+  onClick: PropTypes.func.isRequired,
+  disabled: PropTypes.bool,
+  outline: PropTypes.bool,
+  type: PropTypes.oneOf(['button', 'submit', 'reset']),
+};
+Button.defaultProps = {
+  children: null,
+  label: '',
+  disabled: false,
+  outline: false,
+  type: 'button',
 };

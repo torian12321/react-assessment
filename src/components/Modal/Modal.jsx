@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import { ModalOverlay } from './Modal.Overlay';
 import { ModalTitle } from './Modal.Title';
@@ -36,3 +37,14 @@ export const Modal = ({ isVisible = false, children, title }) => {
 };
 
 Modal.Options = ModalOptions;
+
+Modal.propTypes = {
+  children: PropTypes.node,
+  title: PropTypes.string,
+  isVisible: PropTypes.bool,
+};
+Modal.defaultProps = {
+  children: null,
+  title: '',
+  isVisible: false,
+};
