@@ -6,6 +6,7 @@ const Title = styled.div`
   color: black;
   margin-bottom: 12px;
   font-size: 16px;
+  font-weight: bold;
   border-bottom: 1px solid #aaa;
 `;
 

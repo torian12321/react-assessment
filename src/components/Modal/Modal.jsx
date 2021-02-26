@@ -13,11 +13,12 @@ const ModalWrapper = styled.div`
   transform: translateX(-50%);
 
   width: 80%;
-  max-width: 600px;  
+  max-width: 480px;  
   padding: 20px 16px;
   background: white;
   border: 1px solid red;
   border-radius: 8px;
+  text-align: left;
   z-index: 1001;
 `;
 

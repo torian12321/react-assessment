@@ -14,6 +14,7 @@ export const Loader = styled.div`
   font-size: 40px;
   width: 1em;
   height: 1em;
+  margin: 16px auto;
 
   border: 6px solid currentColor;
   border-top-color: transparent;
