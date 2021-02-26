@@ -1,4 +1,13 @@
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
+
+const fadeInAnimation = keyframes`
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 0.4;
+  }
+`;
 
 export const ModalOverlay = styled.div`
   position: fixed;
@@ -8,5 +17,5 @@ export const ModalOverlay = styled.div`
   right: 0;
   background: black;
   opacity: 0.8;
-  z-index: 1000;
+  animation: ${fadeInAnimation} 0.5s ease-in 1;
 `;

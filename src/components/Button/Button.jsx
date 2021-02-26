@@ -18,7 +18,7 @@ export const Button = ({
   };
 
   return content ? (
-    <Wrapper outline={outline} onClick={handleClick} type={type}>
+    <Wrapper outline={outline} onClick={handleClick} type={type} disabled={disabled}>
       {content}
     </Wrapper>
   ) : null;

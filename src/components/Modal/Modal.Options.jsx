@@ -5,6 +5,7 @@ import styled from 'styled-components';
 const Options = styled.div`
   display: flex;
   justify-content: flex-end;
+  gap: 12px;
   padding-top: 40px;
 `;
 

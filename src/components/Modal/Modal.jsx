@@ -1,37 +1,53 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import PropTypes from 'prop-types';
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
 import { ModalOverlay } from './Modal.Overlay';
 import { ModalTitle } from './Modal.Title';
 import { ModalOptions } from './Modal.Options';
 
+const upAnimation = keyframes`
+  from {
+    opacity: 0;
+    margin-top: 16px;
+  }
+  to {
+    opacity: 1;
+    margin-top: 0;
+  }
+`;
 const ModalWrapper = styled.div`
+  z-index: 1000;
+`;
+const ModalBody = styled.div`
   position: fixed;
   top: 20px;
   left: 50%;
   transform: translateX(-50%);
 
   width: 80%;
-  max-width: 600px;  
+  max-width: 480px;  
   padding: 20px 16px;
   background: white;
   border: 1px solid red;
   border-radius: 8px;
-  z-index: 1001;
+  text-align: left;
+  animation-fill-mode: forwards;
+  animation-delay: .3s;
+  animation: ${upAnimation} 0.5s ease-in 1;
 `;
 
 export const Modal = ({ isVisible = false, children, title }) => {
   const { body: _dBody } = document;
 
   return (isVisible && children) ? ReactDOM.createPortal(
-    <>
+    <ModalWrapper>
       <ModalOverlay />
-      <ModalWrapper>
+      <ModalBody>
         <ModalTitle title={title} />
         {children}
-      </ModalWrapper>
-    </>,
+      </ModalBody>
+    </ModalWrapper>,
     _dBody
   ) : null;
 };

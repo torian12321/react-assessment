@@ -79,6 +79,14 @@ module.exports = {
         ],
         exclude: [/public/],
       },
+      {
+        test: /\.(png|jpe?g|gif)$/i,
+        use: [
+          {
+            loader: 'file-loader',
+          },
+        ],
+      },
     ],
   },
   devtool: isDevelopment ? 'inline-source-map' : 'source-map',
