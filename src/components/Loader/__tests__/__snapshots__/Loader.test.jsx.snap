@@ -1,0 +1,22 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+.c0 {
+  color: #3970a3;
+  font-size: 40px;
+  width: 1em;
+  height: 1em;
+  margin: 16px auto;
+  border: 6px solid currentColor;
+  border-top-color: transparent;
+  border-radius: 50%;
+  -webkit-animation: eoUyJr .8s ease infinite;
+  animation: eoUyJr .8s ease infinite;
+}
+
+<div>
+  <div
+    class="c0"
+  />
+</div>
+`;

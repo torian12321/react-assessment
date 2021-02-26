@@ -18,16 +18,16 @@ const Logo = styled.img`
   margin-right: 6px;
 `;
 
-export const ModalTitle = ({ title }) => (title ? (
+export const ModalTitle = ({ caption }) => (caption ? (
   <Title>
     <Logo src={iconWarning} alt="warning" />
-    {title}
+    {caption}
   </Title>
 ) : null);
 
 ModalTitle.propTypes = {
-  title: PropTypes.string,
+  caption: PropTypes.string,
 };
 ModalTitle.defaultProps = {
-  title: '',
+  caption: '',
 };

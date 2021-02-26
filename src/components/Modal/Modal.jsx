@@ -44,7 +44,7 @@ export const Modal = ({ isVisible = false, children, title }) => {
     <ModalWrapper>
       <ModalOverlay />
       <ModalBody>
-        <ModalTitle title={title} />
+        <ModalTitle caption={title} />
         {children}
       </ModalBody>
     </ModalWrapper>,
