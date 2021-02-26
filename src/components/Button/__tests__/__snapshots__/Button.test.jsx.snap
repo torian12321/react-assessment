@@ -1,0 +1,32 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Should NOT render when label & children are missed 1`] = `<div />`;
+
+exports[`renders correctly 1`] = `
+.c0 {
+  padding: 12px 16px;
+  min-width: 100px;
+  color: #3970a3;
+  font-weight: bold;
+  background: #e8f4ff;
+  border: 1px solid #e8f4ff;
+  border-radius: 8px;
+  cursor: pointer;
+  -webkit-transition: background .8s;
+  transition: background .8s;
+  outline: none;
+}
+
+.c0:hover {
+  background: #d1e7fb;
+}
+
+<div>
+  <button
+    class="c0"
+    type="button"
+  >
+    Submit
+  </button>
+</div>
+`;
