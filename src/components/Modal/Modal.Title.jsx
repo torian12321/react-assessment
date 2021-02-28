@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
-import iconWarning from './icons/icon-warning.png';
+import iconWarning from './icons/icon-warning.svg';
 
 const Title = styled.div`
   display: flex;
